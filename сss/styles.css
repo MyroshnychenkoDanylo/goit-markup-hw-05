@@ -1,4 +1,4 @@
-
+ 
  :root{
    --primary-text-color:#757575;
    --tittle-text-color:#212121;
@@ -32,7 +32,9 @@
    --background-social-network-hover: #2196F3;
    --fill-social-network-footer: #FFFFFF;
    --background-social-network-footer:rgba(255, 255, 255, 0.1);
-   --block-feature:rgba(245, 244, 250, 1)
+   --block-feature:rgba(245, 244, 250, 1);
+   --secendory-text-color: #FFFFFF;
+   --bgc-text-show:rgba(47, 48, 58, 0.8);
  }
 
  html{
@@ -119,6 +121,7 @@ border-bottom: 1px solid #ECECEC;
  .container .site-nav .link-nav{
    display: block;
    margin-right: 50px;
+   
  }
 
  .container .site-nav .link-nav:last-child {
@@ -128,7 +131,28 @@ border-bottom: 1px solid #ECECEC;
  .container.header .increase{
    padding-top: 32px;
    padding-bottom: 32px;
+   position: relative;
  }
+
+.link-nav .current::after{
+   content:'';
+   position: absolute;
+   background: var(--add-color);
+   width: 100%;
+   height: 4px;
+   border-radius: 2px;
+   bottom: 0;
+   left: 0; 
+}
+
+.link-nav .increase:hover::after{content: '';
+   position: absolute;
+   background: var(--add-color);
+   width: 100%;
+   height: 4px;
+   border-radius: 2px;
+   bottom: 0;
+   left: 0;}
 
 .container .site-info{
    display: flex;
@@ -242,6 +266,29 @@ padding-top: 200px;
    margin-right: auto;
 }
 
+.backdrop{
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.2);
+      top: 0;
+      left: 0;
+}
+
+.modal{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%); 
+   min-width: 528px;
+   min-height: 581px;
+   background: #FFFFFF;
+   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+   0px 1px 1px rgba(0, 0, 0, 0.14), 
+   0px 2px 1px rgba(0, 0, 0, 0.2);
+   border-radius: 4px;
+}
+
 .hero-title{
 color: var(--hero-title-color);
 font-weight: 900;
@@ -315,11 +362,36 @@ flex-basis: calc((100%-90px)/4);
 .list.wwd{
    display: flex;
    align-items: center;
+   
 }
+
+.list.wwd .item{
+   position: relative;
+}
+
+.list.wwd .show-wwd{
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   padding-top: 27px;
+   padding-bottom: 27px;
+   background-color: var(--bgc-text-show);
+}
+
+.list.wwd .show-text{
+   font-weight: 700;
+   font-size: 14px;
+   line-height: 1.14;
+   text-align: center;
+   letter-spacing: 0.03em;
+   text-transform: uppercase;
+color: var(--secendory-text-color);}
 
 .list.wwd .item:not(:last-child){
 margin-right: 30px;
 }
+
+
 
 .section.team{
    background-color: var(--last-section-bgcolor);
