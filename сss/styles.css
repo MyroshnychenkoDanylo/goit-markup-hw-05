@@ -289,6 +289,11 @@ padding-top: 200px;
    border-radius: 4px;
 }
 
+.backdrop.is-hidden{
+   opacity: 0;
+}  
+
+
 .hero-title{
 color: var(--hero-title-color);
 font-weight: 900;
