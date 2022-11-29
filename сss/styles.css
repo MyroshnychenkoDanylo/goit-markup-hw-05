@@ -35,6 +35,8 @@
    --block-feature:rgba(245, 244, 250, 1);
    --secendory-text-color: #FFFFFF;
    --bgc-text-show:rgba(47, 48, 58, 0.8);
+   --fiil-icon-close:#000000;
+   --bgc-icon-close:#FFFFFF;
  }
 
  html{
@@ -291,7 +293,31 @@ padding-top: 200px;
 
 .backdrop.is-hidden{
    opacity: 0;
+   pointer-events: none;
 }  
+
+.button-close {
+   position: absolute;
+   top: 8px;
+   bottom: 543px;
+   left: 490px;
+   right: 8px; 
+   cursor: pointer;
+   width: 30px;
+   height: 30px;
+   border-radius: 50%;
+   padding: 6px;
+   border: 1px solid rgba(0, 0, 0, 0.1);
+   background:var(--bgc-icon-close);
+}
+
+.icon-close{
+   width: 100%;
+   height: 100%;
+   border-radius: 50%;
+   fill: var(--fiil-icon-close);
+}
+
 
 
 .hero-title{
